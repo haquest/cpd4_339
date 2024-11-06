@@ -132,7 +132,6 @@ def csv_to_html(csv_filename, output_folder):
                      <button class="back-to-top" onclick="scrollToTop()">Back to top</button>
         </body>
         <script src="../js/main.js"></script>
-        <script src="../js/imagePlaceholder.js"></script>
 </html>
 """
         import re
