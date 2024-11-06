@@ -1,0 +1,224 @@
+/* -- Global Styles -- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Set the global font style for the entire page */
+
+/* -- Center-aligning common elements -- */
+header, td, h2, footer, #gallery {
+    text-align: center;
+}
+/* Center text inside header, table cells, headings, footer, and gallery */
+
+/* -- Summary Section Styling -- */
+#summary {
+    margin: 16px;
+    padding: 8px 16px;
+    background-color: #9B9A6D;
+    border-radius: 8px;
+}
+/* Add margin, padding, background color, and rounded corners to the summary section */
+
+p span.athlete {
+    padding: 0px;
+}
+/* Remove default padding for athlete text inside paragraphs */
+
+/* -- Table Styling -- */
+table {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-collapse: collapse;
+}
+/* Full-width table with padding on both sides, and no extra space between cells */
+
+/* -- Table row hover effect -- */
+tbody tr:hover:not(:first-child) {
+    background-color: #989C97;
+}
+/* Change background color of table rows when hovered, excluding the first row */
+
+tbody tr:hover:not(:first-child):nth-child(odd) {
+    background-color: #9B9A6D;
+}
+/* Alternate row color on hover for odd-numbered rows */
+
+/* -- Individual results grid styling -- */
+#individual-results {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+/* Flexbox layout for the individual results grid, centered with gaps between items */
+
+#individual-results > h2 {
+    width: 100%;
+}
+/* Full-width heading for the individual results section */
+
+/* -- Description List Styling -- */
+dl {
+    margin: 0;
+}
+/* Reset margin for description list */
+
+dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+/* Bold and add spacing below the description term */
+
+dd {
+    margin: 0 0 10px 0;
+}
+/* Add margin to description details */
+
+/* -- Caption Styling -- */
+figcaption {
+    font-weight: bold;
+}
+/* Make figure captions bold */
+
+/* -- Athlete and Gallery Images -- */
+.athlete, #gallery > img {
+    border: 1px solid #2e2e00;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* Apply border, rounded corners, and transition effects to both athlete and gallery images */
+
+.athlete:hover, #gallery > img:hover {
+    transform: scale(1.025);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Scale up and add shadow when images are hovered */
+
+.athlete {
+    padding: 15px;
+}
+/* Add padding around athlete images */
+
+img {
+    border-radius: 8px;
+    display: inline-grid;
+}
+/* Rounded corners and center-align images using inline-grid */
+
+/* -- Gallery images with specific sizing -- */
+#gallery > img {
+    width: 15%;
+    padding: 10px;
+}
+/* Set width for gallery images and add padding around them */
+
+/* -- Footer Styling -- */
+footer {
+    background-color: #9B9A6D;
+    padding: 8px 0 18px;
+    margin-top: 8px;
+}
+/* Style the footer with background color, padding, and top margin */
+
+footer a {
+    color: #2e2e00;
+}
+/* Set link color inside of the footer */
+
+/* -- Header Links Styling -- */
+h1 a {
+    color: black;
+}
+/* Set header link color to black */
+
+h1 a:hover {
+    background-color: #989C97;
+}
+/* Change background color when hovering over header links */
+
+/* -- Navigation Bar Styling -- */
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+/* Flexbox layout for navigation items, with spacing, centering, and padding */
+
+nav li:hover {
+    background-color: #989C97;
+}
+/* Change background color when hovering over navigation items */
+
+nav a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+}
+/* Style navigation links with bold, uppercase text, and prevent line breaks */
+
+/* -- Prefers-Reduced Motion Media Query -- */
+@media (prefers-reduced-motion: reduce) {
+    .athlete, #gallery > img {
+        transition: none;
+    }
+    .athlete:hover, #gallery > img:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+/* Disable transitions and animations for users who prefer reduced motion */
+
+/* -- Back to Top Button Styling -- */
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 3;
+}
+/* Fixed position for the back-to-top button at the bottom right with a high z-index */
+
+
+@media (min-width: 700px) {
+    #gallery {
+        grid-template-columns: 1fr 1fr;
+        padding: 24px;
+    }
+
+    header, footer {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #mode-toggle {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    #gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 32px;
+    }
+
+    header, footer {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #mode-toggle {
+        font-size: 1.5rem;
+    }
+}
